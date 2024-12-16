@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+        <title>디자인 디자인 안하기</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="canvas1"></div>
+            <div id="canvas2"></div>
+        </div>
+
+        <div id="top-bar">
+            <span class="course-name">박고은 디자이너</span>
+            <span class="designer-name">Earth Observer Sentinel-3</span>
+            <span class="workshop-name">디자인 디자인 안하기</span>
+        </div>
+
+        <div class="button-container">
+            <button class="nav-button" onclick="navigate('prev')">&lt;</button>
+            <div class="page-number">3</div>
+            <button class="nav-button" onclick="navigate('next')">&gt;</button>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+        <script>
+            let pageNum = 3;
+            let imgURL = "../assets/images/img" + pageNum + ".png";
+
+            let textContent =
+                "이 프로젝트는 ESA(유럽우주국)이 개발한 인공위성 Sentinel-3가 지구로 전송해오고 있는 데이터에 관한 리서치 작업이다. 센티넬-3은 매일 지구 주위를 공전하며 그 표면을 촬영한 데이터를 실시간으로 전송하고 ESA 웹사이트를 통해 대중에게도 공유되고 있는데, 우연히 접한 이 우주로부터 온 이미지 데이터들이 시각적으로 이해할 수 없는 방대한 정보를 담고 있다는 점에서 흥미를 느꼈다. 동시에 이 위성이 지구를 관찰하는 방식에도 이 리서치는 센티넬-3이 보내온 이미지를 아카이브한 책으로 정리하였는데, 이 책은 수백만 마일 떨어진 곳에서 본 지구, 일명 'A Blue Pale Dot' 이미지으로부터 시작하여, 센티넬에서 보낸 방대한 정보가 담긴 수많은 점(픽셀)들의 집합 이미지로 끝을 맺는다. 이 과정에서 위성이 지구를 관찰하는 방법을 효율적으로 시각화하기 위해 센티넬-3가 지구를 한 바퀴 도는데 필요한 385개의 궤도 중에서 하나의 궤도를 선택하였다. 다양한 레이어로 구성된 센티넬의 이미지 데이터는 우리의 육안으로는 '보이지 않는' 지구의 표면을 보이도록 시각화하였기 때문에 아름답다.";
+            function navigate(direction) {
+                if (direction === "prev") {
+                    window.location.href = "./index_" + (pageNum - 1) + ".html";
+                } else if (direction === "next") {
+                    window.location.href = "./index_" + (pageNum + 1) + ".html";
+                }
+            }
+        </script>
+        <script src="../sketch1.js"></script>
+        <script src="../sketch2.js"></script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+        <title>디자인 디자인 안하기</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="canvas1"></div>
+            <div id="canvas2"></div>
+        </div>
+
+        <div id="top-bar">
+            <span class="course-name">박고은 디자이너</span>
+            <span class="designer-name">Flow Map of Ginseng</span>
+            <span class="workshop-name">디자인 디자인 안하기</span>
+        </div>
+
+        <div class="button-container">
+            <button class="nav-button" onclick="navigate('prev')">&lt;</button>
+            <div class="page-number">1</div>
+            <button class="nav-button" onclick="navigate('next')">&gt;</button>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+        <script>
+            let pageNum = 1;
+            let imgURL = "../assets/images/img" + pageNum + ".png";
+
+            let textContent =
+                "고려인삼은 오랜 기간 동아시아 지역에서 귀하게 여겨져 온 뿌리식물 약초로, 한국의 무역 역사에서 최근 1,000년 동안 가장 큰 영향력을 행사해온 수출 품목 중 하나이다. 이 리서치는 지난 2,000년 동안 고려 인삼의 무역 경로가 확장되어 온 경로에 집중하였는데, 시대 흐름에 따라 새롭게 무역 경로가 확장된 역사적 배경과 상품으로써의 가치 변동에 영향을 끼친 다양한 관련 배경 정보를 정리하였다. 최종적으로는 한국의 시간 연대표를 4개의 다른 투명한 레이어에 나누어 담고, 각 시대에 해당하는 텍스트 정보와 이미지를 더하였다. 각각의 다른 레이어를 따로 보고, 또 중첩하여 관찰함으로써 Flow map의 새로운 맥락을 발견하는 것을 의도하였다.";
+            function navigate(direction) {
+                if (direction === "prev") {
+                    window.location.href = "./index_8.html";
+                } else if (direction === "next") {
+                    window.location.href = "./index_" + (pageNum + 1) + ".html";
+                }
+            }
+        </script>
+        <script src="../sketch1.js"></script>
+        <script src="../sketch2.js"></script>
+    </body>
+</html>

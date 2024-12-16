@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "NotoSans";
+    src: url("./assets/notosans.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    -ms-overflow-style: none;  /* IE and Edge */
+     scrollbar-width: none;  /* Firefox */
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#canvas1,
+#canvas2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+#top-bar {
+    position: fixed; /* Fix the top-bar at the top of the page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Height of the top bar */
+    font-family: "NotoSans";
+
+    color: white;
+    padding: 0 20px; /* Optional padding */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    box-sizing: border-box; /* Ensure padding doesn't affect width calculation */
+  }
+  
+  #top-bar span {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+    overflow: hidden; /* Ensures long text doesn't overflow */
+    text-overflow: ellipsis; /* Adds ellipsis if the text overflows */
+  }
+  
+  .course-name {
+    text-align: left;
+  }
+  
+  .designer-name {
+    text-align: center;
+    flex: 1; /* Center-aligns this item */
+  }
+  
+  .workshop-name {
+    text-align: right;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Ensures no overflow */
+    text-overflow: ellipsis; /* Adds ellipsis when overflow occurs */
+    flex-shrink: 0; /* Prevent shrinking */
+  }
+  
+  #container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between canvases */
+    margin-top: 60px; /* Push the canvases down to account for the fixed top bar */
+  }
+
+  .button-container {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+   font-family: "NotoSans";
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: none;
+    color: white;
+    border: none;
+   background-color: black;
+}
+
+.page-number{
+    color: white;
+    font-family: 'NotoSans';
+}
